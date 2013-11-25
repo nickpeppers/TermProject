@@ -63,7 +63,18 @@ namespace TermProject
 
         private void ButtonClick(object sender, EventArgs e)
         {
+			var button = sender as Button;
 
+			if (!_yourTurn)
+			{
+				button.SetBackgroundColor(Color.Black);
+				_yourTurn = !_yourTurn;
+			}
+			else
+			{
+				button.SetBackgroundColor(Color.White);
+				_yourTurn = !_yourTurn;
+			}
         }
     }
 }
