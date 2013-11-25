@@ -60,6 +60,15 @@ namespace TermProject
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f05003c
+			public const int ComputerStartButon = 2131034172;
+			
+			// aapt resource value: 0x7f05003b
+			public const int PlayerStartButton = 2131034171;
+			
+			// aapt resource value: 0x7f05003a
+			public const int TitleText = 2131034170;
+			
 			// aapt resource value: 0x7f050001
 			public const int button1 = 2131034113;
 			
@@ -207,6 +216,9 @@ namespace TermProject
 			// aapt resource value: 0x7f05000a
 			public const int button9 = 2131034122;
 			
+			// aapt resource value: 0x7f050039
+			public const int linearLayout = 2131034169;
+			
 			// aapt resource value: 0x7f050000
 			public const int linearLayout1 = 2131034112;
 			
@@ -228,6 +240,9 @@ namespace TermProject
 			// aapt resource value: 0x7f050030
 			public const int linearLayout7 = 2131034160;
 			
+			// aapt resource value: 0x7f050038
+			public const int relativeLayout = 2131034168;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -243,6 +258,9 @@ namespace TermProject
 			
 			// aapt resource value: 0x7f030000
 			public const int MainLayout = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int StartLayout = 2130903041;
 			
 			static Layout()
 			{

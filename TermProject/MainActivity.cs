@@ -6,19 +6,24 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace TermProject
 {
-    [Activity(Label = "TermProject", MainLauncher = true)]
+	[Activity(Label = "MainActivity", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
-        private Button[] _board;
+		private Button[] _board;
+		private bool _playerStart;
+		private bool _yourTurn;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.MainLayout);
+			_playerStart = Intent.GetBooleanExtra("PlayerStart", true);
+			_yourTurn = _playerStart;
 
             _board = new Button[]
             {
