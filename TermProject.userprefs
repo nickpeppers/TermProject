@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TermProject\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="TermProject\StartActivity.cs" Line="27" Column="64" />
+      <File FileName="TermProject\StartActivity.cs" Line="1" Column="1" />
       <File FileName="TermProject\MainActivity.cs" Line="70" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>

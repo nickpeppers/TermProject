@@ -50,6 +50,8 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartActivity.cs" />
+    <Compile Include="MinMax.cs" />
+    <Compile Include="GameButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
