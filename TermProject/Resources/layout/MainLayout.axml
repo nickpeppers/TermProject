@@ -11,37 +11,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button1"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button2"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button3"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button4"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button5"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button6"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button7"
@@ -54,37 +54,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button8"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button9"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button10"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button11"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button12"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button13"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button14"
@@ -97,37 +97,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout3">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button15"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button16"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button17"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button18"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button19"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button20"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button21"
@@ -140,37 +140,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout4">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button22"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button23"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button24"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button25"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button26"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button27"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button28"
@@ -183,37 +183,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout5">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button29"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button30"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button31"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button32"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button33"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button34"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button35"
@@ -226,37 +226,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout6">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button36"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button37"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button38"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button39"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button40"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button41"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button42"
@@ -269,37 +269,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout7">
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button43"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button44"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button45"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button46"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button47"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button48"
             android:layout_weight="1" />
-        <Button
+        <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/button49"

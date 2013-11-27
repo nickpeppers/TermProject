@@ -58,7 +58,7 @@ namespace TermProject
 			{
 				_board[i].Click += GameButtonClick;
 				_board[i].x = i % 7;
-				_board[i].y = i / 7;
+				_board[i].y = (i / 7);
             }
 
 			_board[0].PerformClick();

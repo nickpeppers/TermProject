@@ -1,5 +1,8 @@
 using System;
 using Android.Widget;
+using Android.Content;
+using Android.Util;
+
 
 namespace TermProject
 {
@@ -13,7 +16,14 @@ namespace TermProject
 
 		public int score { get; set; }
 
-		public GameButton(char color, int xCoordinate, int yCoordinate)
+		public GameButton(Context context, IAttributeSet attr)
+			: base(context, attr)
+		{
+
+		}
+
+		public GameButton(Context context, IAttributeSet attr,  char color, int xCoordinate, int yCoordinate)
+			: base(context, attr)
         {
 			c = color;
 			x = xCoordinate;
