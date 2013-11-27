@@ -8,7 +8,7 @@ namespace TermProject
 {
 	public class GameButton : Button
     {
-		public char c { get; set; }
+		public char color { get; set; }
 		//(x,y) position and move score
 		public int x { get; set; }
 
@@ -25,7 +25,7 @@ namespace TermProject
 		public GameButton(Context context, IAttributeSet attr,  char color, int xCoordinate, int yCoordinate)
 			: base(context, attr)
         {
-			c = color;
+			this.color = color;
 			x = xCoordinate;
 			y = yCoordinate;
 			score = 0;

@@ -5,11 +5,11 @@ namespace TermProject
 {
     public class MinMax
     {
-			//an array of buttons
-		static GameButton[,] buttons;
-	
+
+		public GameButton[,] buttons { get; set; }
+		
 			//sending in the color of the player who wants to make the next move
-		private int makeMove(GameButton[,] b, char color)
+		public int makeMove(GameButton[,] b, char color)
 		{
 			//updating the gameboard
 			buttons = b;
@@ -78,7 +78,7 @@ namespace TermProject
 				{
 					//if there is a button of the same color, you can have moves around it: left, upperLeft, uppper, upperRight, right,
 					//lowerRight, lower, lowerLeft
-					if(buttons[i,j].c == color)
+					if(buttons[i,j].color == color)
 					{
 						//left
 						if(i - 1 >= 0 && j >= 0)
@@ -143,10 +143,10 @@ namespace TermProject
 		{
 				//starts off at one because the move made counts as 1
 				int score = 1;
-				char color = move.c;
+			char color = move.color;
 				for(int i = 0; i < 7; i++)
 					for(int j = 0; j < 7; j++)
-						if(buttons[i,j].c == color)
+					if(buttons[i,j].color == color)
 							score++;
 				return score;
         }

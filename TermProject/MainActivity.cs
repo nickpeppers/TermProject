@@ -13,13 +13,19 @@ namespace TermProject
 	[Activity(Label = "MainActivity", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
+		private MinMax _minMax = new MinMax();
 		private GameButton[] _board;
+		private GameButton[,] _minMaxArray = new GameButton[7,7];
+		private int _nextMove;
+		private int _turnCount;
 		private bool _playerStart;
 		private bool _yourTurn;
+		private char _turnColor;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
 
             SetContentView(Resource.Layout.MainLayout);
 			_playerStart = Intent.GetBooleanExtra("PlayerStart", true);
@@ -59,29 +65,65 @@ namespace TermProject
 				_board[i].Click += GameButtonClick;
 				_board[i].x = i % 7;
 				_board[i].y = (i / 7);
-            }
+			}
+
+			if (!_playerStart) 
+			{
+				_turnColor = 'b';
+			} 
+			else 
+			{
+				_turnColor = 'w';
+			}
 
 			_board[0].PerformClick();
 			_board[6].PerformClick();
 			_board[48].PerformClick();
 			_board[42].PerformClick();
+
+			if (!_playerStart && _turnCount > 4) 
+			{
+				_board [9].PerformClick();
+			} 
         }
 
         private void GameButtonClick(object sender, EventArgs e)
         {
 			var button = sender as GameButton;
+			_turnCount++;
+
+			button.color = _turnColor;
 
 			if (!_yourTurn)
 			{
 				button.SetBackgroundColor(Color.Black);
-				_yourTurn = !_yourTurn;
+
+				if (_turnCount > 4) 
+				{
+					for (int i = 0; i < _board.Length; i++) 
+					{
+						_minMaxArray [_board [i].x, _board [i].y] = _board [i];
+					}
+					_nextMove = _minMax.makeMove (_minMaxArray, _turnColor);
+					_board [_nextMove].PerformClick ();
+				}
 			}
 			else
 			{
 				button.SetBackgroundColor(Color.White);
-				_yourTurn = !_yourTurn;
 			}
+
+			_yourTurn = !_yourTurn;
+			ChangeTurnColor ();
         }
+
+		private void ChangeTurnColor()
+		{
+			if (_turnColor == 'b')
+				_turnColor = 'w';
+			else
+				_turnColor = 'b';
+		}
     }
 }
 
