@@ -83,7 +83,7 @@ namespace TermProject
 
 			if (!_playerStart && _turnCount > 4) 
 			{
-				_board [9].PerformClick();
+				ComputerMove();
 			} 
         }
 
@@ -97,16 +97,6 @@ namespace TermProject
 			if (!_yourTurn)
 			{
 				button.SetBackgroundColor(Color.Black);
-
-				if (_turnCount > 4) 
-				{
-					for (int i = 0; i < _board.Length; i++) 
-					{
-						_minMaxArray [_board [i].x, _board [i].y] = _board [i];
-					}
-					_nextMove = _minMax.makeMove (_minMaxArray, _turnColor);
-					_board [_nextMove].PerformClick ();
-				}
 			}
 			else
 			{
@@ -115,6 +105,11 @@ namespace TermProject
 
 			_yourTurn = !_yourTurn;
 			ChangeTurnColor ();
+
+			if (!_yourTurn)
+			{
+				ComputerMove();
+			}
         }
 
 		private void ChangeTurnColor()
@@ -123,6 +118,19 @@ namespace TermProject
 				_turnColor = 'w';
 			else
 				_turnColor = 'b';
+		}
+
+		private void ComputerMove ()
+		{
+			if (_turnCount > 4) 
+			{
+				for (int i = 0; i < _board.Length; i++) 
+				{
+					_minMaxArray [_board [i].y, _board [i].x] = _board [i];
+				}
+				_nextMove = _minMax.makeMove (_minMaxArray, _turnColor);
+				_board [_nextMove].PerformClick ();
+			}
 		}
     }
 }
