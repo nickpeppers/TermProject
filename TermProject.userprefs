@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TermProject\StartActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TermProject\MinMax.cs">
     <Files>
       <File FileName="TermProject\StartActivity.cs" Line="1" Column="1" />
-      <File FileName="TermProject\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TermProject\MainActivity.cs" Line="131" Column="1" />
+      <File FileName="TermProject\MinMax.cs" Line="55" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

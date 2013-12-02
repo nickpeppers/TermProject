@@ -65,6 +65,8 @@ namespace TermProject
 				_board[i].Click += GameButtonClick;
 				_board[i].x = i % 7;
 				_board[i].y = (i / 7);
+				_board[i].score = 0;
+				_board[i].color = 'n';
 			}
 
 			if (!_playerStart) 
@@ -93,6 +95,7 @@ namespace TermProject
 			_turnCount++;
 
 			button.color = _turnColor;
+			button.Enabled = false;
 
 			if (!_yourTurn)
 			{
@@ -128,7 +131,7 @@ namespace TermProject
 				{
 					_minMaxArray [_board [i].y, _board [i].x] = _board [i];
 				}
-				_nextMove = _minMax.makeMove (_minMaxArray, _turnColor);
+				_nextMove = _minMax.makeMove (_minMaxArray);
 				_board [_nextMove].PerformClick ();
 			}
 		}
