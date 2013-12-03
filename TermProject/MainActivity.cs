@@ -94,10 +94,30 @@ namespace TermProject
         private void GameButtonClick(object sender, EventArgs e)
         {
 			var button = sender as GameButton;
+
+			if (_yourTurn && _turnCount >= 4)
+			{
+				for (int i = 0; i < _board.Length; i++)
+				{
+					_minMaxArray[_board[i].y, _board[i].x] = _board[i];
+				}
+				_minMax.buttons = _minMaxArray;
+
+				// right corner doesnt work for some dumb reason
+				var LegalMoveArray = _minMax.legalMoves('w');
+				if (LegalMoveArray[button.y, button.x] == null)
+				{
+					return;
+				}
+			}
+
+
 			_turnCount++;
 
 			button.color = _turnColor;
 			button.Enabled = false;
+
+
 
 			if (!_yourTurn)
 			{
