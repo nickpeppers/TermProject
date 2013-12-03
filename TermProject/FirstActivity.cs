@@ -22,6 +22,7 @@ namespace TermProject
 			Button playerStartButton = FindViewById<Button> (Resource.Id.PlayerStartButton);
 			Button computerStartButton = FindViewById<Button> (Resource.Id.ComputerStartButon);
 
+			// adds extra to activity to determine the player starts first
 			playerStartButton.Click += (sender, e) => 
 			{
 				var mainActivity = new Intent (this, typeof(MainActivity));
@@ -29,6 +30,7 @@ namespace TermProject
 				StartActivity(mainActivity);
 			};
 
+			// adds extra to activity to determine the computer starts first
 			computerStartButton.Click += (sender, e) => 
 			{
 				var mainActivity = new Intent (this, typeof(MainActivity));
