@@ -20,7 +20,7 @@ namespace TermProject
 					if(butt[i,j] != null)
 						butt[i,j].score = (moveScore(butt[i,j] , 'b'));
 			GameButton temp = maxMove(butt);
-			return temp.x + temp.y*7;
+			return temp.x + temp.y * 7;
 		}
 
 		//sending in the color of the player who wants to make the next move
@@ -58,7 +58,7 @@ namespace TermProject
 			return temp;
 		}
 				
-		private GameButton[,] legalMoves(char color)
+		public GameButton[,] legalMoves(char color)
 		{
 			//making a place to store the moves
 			GameButton[,] moves = new GameButton[7,7];

@@ -83,10 +83,10 @@ namespace TermProject
 			_board[48].PerformClick();
 			_board[42].PerformClick();
 
-			if (!_playerStart && _turnCount > 4) 
+			if (!_playerStart && _turnCount >= 4)
 			{
 				ComputerMove();
-			} 
+			}
         }
 
         private void GameButtonClick(object sender, EventArgs e)
@@ -107,11 +107,22 @@ namespace TermProject
 			}
 
 			_yourTurn = !_yourTurn;
-			ChangeTurnColor ();
+			ChangeTurnColor();
 
-			if (!_yourTurn)
+			if (_turnCount >= 49)
 			{
-				ComputerMove();
+				// TODO: Add win popup here
+			}
+			else
+			{
+				if (!_yourTurn && !_playerStart && _turnCount != 4)
+				{
+					ComputerMove();
+				}
+				else if(_playerStart && !_yourTurn)
+				{
+					ComputerMove();
+				}
 			}
         }
 
@@ -125,7 +136,7 @@ namespace TermProject
 
 		private void ComputerMove ()
 		{
-			if (_turnCount > 4) 
+			if (_turnCount >= 4) 
 			{
 				for (int i = 0; i < _board.Length; i++) 
 				{
