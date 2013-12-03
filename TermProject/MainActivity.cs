@@ -30,9 +30,12 @@ namespace TermProject
 
 
             SetContentView(Resource.Layout.MainLayout);
+
+			// gets who started from previous activity
 			_playerStart = Intent.GetBooleanExtra("PlayerStart", true);
 			_yourTurn = _playerStart;
 
+			// creates board of 49 buttons
             _board = new GameButton[]
             {
                 FindViewById<GameButton> (Resource.Id.button1), FindViewById<GameButton> (Resource.Id.button2),
@@ -62,6 +65,7 @@ namespace TermProject
                 FindViewById<GameButton> (Resource.Id.button49),
             };
 
+			// adds click event to buttons sets, score, color, and xy values
 			for (int i = 0; i < _board.Length; i++) 
 			{
 				_board[i].Click += GameButtonClick;
@@ -71,6 +75,7 @@ namespace TermProject
 				_board[i].color = 'n';
 			}
 
+			// sets starting turn color
 			if (!_playerStart) 
 			{
 				_turnColor = 'b';
@@ -80,6 +85,7 @@ namespace TermProject
 				_turnColor = 'w';
 			}
 
+			// clicks the starting four buttons
 			_board[0].PerformClick();
 			_board[6].PerformClick();
 			_board[48].PerformClick();
@@ -97,13 +103,14 @@ namespace TermProject
 
 			if (_yourTurn && _turnCount >= 4)
 			{
+				// converts 1d array into 2d
 				for (int i = 0; i < _board.Length; i++)
 				{
 					_minMaxArray[_board[i].y, _board[i].x] = _board[i];
 				}
 				_minMax.buttons = _minMaxArray;
 
-				// right corner doesnt work for some dumb reason
+				// checks to see if player mood is legal
 				var LegalMoveArray = _minMax.legalMoves('w');
 				if (LegalMoveArray[button.y, button.x] == null)
 				{
@@ -111,14 +118,14 @@ namespace TermProject
 				}
 			}
 
-
+			// increments turn count
 			_turnCount++;
 
+			//sets button color and button to disabled after clicking
 			button.color = _turnColor;
 			button.Enabled = false;
 
-
-
+			//sets color and adds to score count
 			if (!_yourTurn)
 			{
 				_blackScore++;
@@ -135,18 +142,21 @@ namespace TermProject
 
 			if (_turnCount >= 49)
 			{
+				// win popup
 				var WinDialog = new AlertDialog.Builder (this).SetTitle("Congratulations!,").SetMessage("Player wins: " + _whiteScore + " Computer: " + _blackScore).SetPositiveButton("Restart",(sender1, e1) => 
 				{
 					Finish();
 						StartActivity(typeof(FirstActivity));
 				}).Create();
 
+				// lose popup
 				var LoseDialog = new AlertDialog.Builder (this).SetTitle("Sorry!,").SetMessage("Player lost: " + _whiteScore + " Computer: " + _blackScore).SetPositiveButton("Restart",(sender1, e1) => 
 				{
 					Finish();
-						StartActivity(typeof(FirstActivity));
+					StartActivity(typeof(FirstActivity));
 				}).Create();
 
+				// shows corresponding popup
 				if (_whiteScore > _blackScore)
 				{
 					WinDialog.Show();
@@ -158,10 +168,12 @@ namespace TermProject
 			}
 			else
 			{
+				// check to make computer start playing if computer starts
 				if (!_yourTurn && !_playerStart && _turnCount != 4)
 				{
 					ComputerMove();
 				}
+				//check to make computer start playing if the player started
 				else if(_playerStart && !_yourTurn)
 				{
 					ComputerMove();
@@ -169,6 +181,7 @@ namespace TermProject
 			}
         }
 
+		// changes the color according to whose turn it is
 		private void ChangeTurnColor()
 		{
 			if (_turnColor == 'b')
@@ -177,10 +190,12 @@ namespace TermProject
 				_turnColor = 'b';
 		}
 
+		// method to figure out where computer is going to move
 		private void ComputerMove ()
 		{
 			if (_turnCount >= 4) 
 			{
+				// converts 1d array into 2d
 				for (int i = 0; i < _board.Length; i++) 
 				{
 					_minMaxArray [_board [i].y, _board [i].x] = _board [i];

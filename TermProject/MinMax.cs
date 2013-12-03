@@ -5,7 +5,6 @@ namespace TermProject
 {
 	public class MinMax
 	{
-
 		public GameButton[,] buttons { get; set; }
 
 		public int makeMove(GameButton[,] b, char color)
@@ -14,13 +13,29 @@ namespace TermProject
 			buttons = b;
 			color = 'b';
 
-			GameButton[,] butt = legalMoves('b');
+			//1st level of moves
+			GameButton[,] moves = legalMoves('b');
+
+			//for each move in moves, get legal moves, get the score and find the min, and set the score
 			for(int i = 0; i<7;i++)
 				for(int j = 0; j<7;j++)
-					if(butt[i,j] != null)
-						butt[i,j].score = (moveScore(butt[i,j] , 'b'));
-			GameButton temp = maxMove(butt);
-			return temp.x + temp.y * 7;
+					if(moves[i,j] != null){
+						//add moves i j to b
+						buttons[i,j].color  = 'b';
+						GameButton[,] move2 = legalMoves('w');
+						//getting the move score
+						for(int x = 0; x < 7;x++)
+							for(int y = 0; y < 7;y++)
+								if(move2[x,y] != null)
+									move2[x,y].score = moveScore(move2[i,j] , 'w');
+
+						moves[i,j].score = minMove(move2).score;
+						buttons[i,j].color  = 'n';
+					}
+
+			//find the max of the min moves and return it
+			GameButton temp = maxMove(moves);
+			return temp.x + temp.y*7;
 		}
 
 		//sending in the color of the player who wants to make the next move
@@ -58,6 +73,26 @@ namespace TermProject
 			return temp;
 		}
 				
+		//takes in a button array and finds the one with the min score and returns it
+		private GameButton minMove(GameButton[,] b)
+		{
+			GameButton temp = null;
+
+			for(int i = 0; i < 7; i++)
+				for(int j = 0; j < 7; j++)
+					if (b[i,j] != null)
+						temp = b[i,j];
+
+			for(int i = 0; i < 7; i++)
+				for(int j = 0; j < 7; j++)
+					if(b[i,j] != null && (b[i,j].score < temp.score))
+					{
+						temp = b[i,j];
+					}
+
+			return temp;
+		}
+
 		public GameButton[,] legalMoves(char color)
 		{
 			//making a place to store the moves
