@@ -8,10 +8,10 @@ using Android.OS;
 using Android.Content.PM;
 using TermProject;
 
-namespace TicTacToe
+namespace TermProject
 {
 	[Activity (Label = "Term Project", LaunchMode = LaunchMode.SingleInstance, ScreenOrientation = ScreenOrientation.Portrait, MainLauncher = true)]
-	public class StartActivity : Activity
+	public class FirstActivity : Activity
 	{
 
 		protected override void OnCreate (Bundle bundle)

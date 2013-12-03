@@ -16,6 +16,8 @@ namespace TermProject
 		private MinMax _minMax = new MinMax();
 		private GameButton[] _board;
 		private GameButton[,] _minMaxArray = new GameButton[7,7];
+		private int _blackScore;
+		private int _whiteScore;
 		private int _nextMove;
 		private int _turnCount;
 		private bool _playerStart;
@@ -99,10 +101,12 @@ namespace TermProject
 
 			if (!_yourTurn)
 			{
+				_blackScore++;
 				button.SetBackgroundColor(Color.Black);
 			}
 			else
 			{
+				_whiteScore++;
 				button.SetBackgroundColor(Color.White);
 			}
 
@@ -111,7 +115,26 @@ namespace TermProject
 
 			if (_turnCount >= 49)
 			{
-				// TODO: Add win popup here
+				var WinDialog = new AlertDialog.Builder (this).SetTitle("Congratulations!,").SetMessage("Player wins: " + _whiteScore + " Computer: " + _blackScore).SetPositiveButton("Restart",(sender1, e1) => 
+				{
+					Finish();
+						StartActivity(typeof(FirstActivity));
+				}).Create();
+
+				var LoseDialog = new AlertDialog.Builder (this).SetTitle("Sorry!,").SetMessage("Player lost: " + _whiteScore + " Computer: " + _blackScore).SetPositiveButton("Restart",(sender1, e1) => 
+				{
+					Finish();
+						StartActivity(typeof(FirstActivity));
+				}).Create();
+
+				if (_whiteScore > _blackScore)
+				{
+					WinDialog.Show();
+				}
+				else
+				{
+					LoseDialog.Show();
+				}
 			}
 			else
 			{
