@@ -8,9 +8,91 @@
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout8">
+        <TextView
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:text="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:text="3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView3"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:text="4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:text="5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:text="6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView6"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="1" />
+        <TextView
+            android:text="7"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
+        <TextView
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView1"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -54,6 +136,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2">
+        <TextView
+            android:text="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -97,6 +190,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout3">
+        <TextView
+            android:text="3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -140,6 +244,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout4">
+        <TextView
+            android:text="4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -183,6 +298,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout5">
+        <TextView
+            android:text="5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -226,6 +352,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout6">
+        <TextView
+            android:text="6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -269,6 +406,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout7">
+        <TextView
+            android:text="7"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:minWidth="30dp" />
         <termproject.GameButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
