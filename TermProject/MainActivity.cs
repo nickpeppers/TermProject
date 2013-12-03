@@ -131,7 +131,7 @@ namespace TermProject
 				{
 					_minMaxArray [_board [i].y, _board [i].x] = _board [i];
 				}
-				_nextMove = _minMax.makeMove (_minMaxArray);
+				_nextMove = _minMax.makeMove (_minMaxArray, 'b');
 				_board [_nextMove].PerformClick ();
 			}
 		}

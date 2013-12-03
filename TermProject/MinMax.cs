@@ -8,68 +8,56 @@ namespace TermProject
 
 		public GameButton[,] buttons { get; set; }
 
-		//sending in the color of the player who wants to make the next move
-		public int makeMove(GameButton[,] b)
+		public int makeMove(GameButton[,] b, char color)
 		{
 			//updating the gameboard
 			buttons = b;
-			GameButton[,] moves = legalMoves('b');
+			color = 'b';
 
-			return maxMove(moves);
+			GameButton[,] butt = legalMoves('b');
+			for(int i = 0; i<7;i++)
+				for(int j = 0; j<7;j++)
+					if(butt[i,j] != null)
+						butt[i,j].score = (moveScore(butt[i,j] , 'b'));
+			GameButton temp = maxMove(butt);
+			return temp.x + temp.y*7;
+		}
+
+		//sending in the color of the player who wants to make the next move
+		private int moveScore(GameButton move, char c)
+		{
+			//starts off at one because the move made counts as 1
+			int score = 1;
+			char color = c;
+			for(int i = 0; i < 7; i++)
+				for(int j = 0; j < 7; j++)
+					if(buttons[i,j].color == color)
+						score++;
+			return score;
 		}
 
 		//takes in a button array and finds the one with the max score and returns it
-		private int maxMove(GameButton[,] b)
-		{
-			int x = 0;
-			int y = 0;
-			for(int i = 0; i < 7; i++)
-				for(int j = 0; j<7; j++)
-					if(b[i,j] != null)
-					{
-						x = i;
-						y = j;
-					}
-
-			for (int i = 0; i < 7; i++)
-				for (int j = 0; j < 7; j++)
-				{
-					Console.WriteLine(x + " " + y);
-					if (b[i, j] != null)
-					{
-						if (b[i, j].score > b[x, y].score)
-						{
-							x = i;
-							y = j;
-						}
-					}
-				}
-			return x + y * 7;
-		}
-
-		private GameButton minMove(GameButton[,] b)
+		private GameButton maxMove(GameButton[,] b)
 		{
 			GameButton temp = null;
 
-			for (int i = 0; i < b.Length; i++)
-			{
-				for (int j = 0; j < b.Length; j++)
-				{
-					if (b[i, j].Enabled && b[i,j] != null)
-					{
-						temp = b[i,j];
-						break;
-					}
-				}
-			}
-
 			for(int i = 0; i < 7; i++)
-				for(int j = 0; j < 7; j++)
-					if(moveScore(b[i,j]) < moveScore(temp))
+				for(int j = 0; j<7; j++)
+					if (b[i,j] != null)
 						temp = b[i,j];
+
+			for (int i = 0; i < 7; i++)
+				for (int j = 0; j < 7; j++)
+					if (b[i, j] != null)
+					{
+						if (b[i,j].score > temp.score)
+						{
+							temp = b[i,j];
+						}
+					}
 			return temp;
 		}
-
+				
 		private GameButton[,] legalMoves(char color)
 		{
 			//making a place to store the moves
@@ -78,6 +66,7 @@ namespace TermProject
 			//check each location to see if it is a move
 			for(int i = 0; i < 7; i++){
 				for(int j = 0; j < 7; j++)
+
 				{
 					//if there is a button of the same color, you can have moves around it: left, upperLeft, uppper, upperRight, right,
 					//lowerRight, lower, lowerLeft
